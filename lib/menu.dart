@@ -3,14 +3,21 @@ import 'package:flutter/material.dart';
 class MyHomePage extends StatelessWidget {
   MyHomePage({super.key});
 
-  final String npm = "2406000001";
-  final String nama = "Burhan";
+  final String npm = "2506606093";
+  final String nama = "Cheryl Mahira Indarto";
   final String kelas = "PBP A";
 
+  static const biru = Color(0xFF3E5FE3);
+  static const hijau = Color(0xFFDEF356);
+  static const merahmuda = Color(0xFFE04A8E);
+  static const kuning = Color(0xFFECDE6F);
+
   final List<ItemHomepage> items = [
-    ItemHomepage("Lihat Proyek", Icons.folder),
-    ItemHomepage("Tambah Proyek", Icons.add_circle),
-    ItemHomepage("Logout", Icons.logout),
+    ItemHomepage("Lihat Proyek", Icons.folder, hijau),
+    ItemHomepage("Tambah Proyek", Icons.add_circle, biru),
+    ItemHomepage("Lihat Experience", Icons.folder, hijau),
+    ItemHomepage("Tambah Experience", Icons.add_circle, biru),
+    ItemHomepage("Logout", Icons.logout, merahmuda),
   ];
 
     @override
@@ -119,8 +126,10 @@ class InfoCard extends StatelessWidget {
 class ItemHomepage {
   final String name;
   final IconData icon;
+  final Color color;
 
-  ItemHomepage(this.name, this.icon);
+
+  ItemHomepage(this.name, this.icon, this.color);
 }
 
 class ItemCard extends StatelessWidget {
@@ -132,7 +141,7 @@ class ItemCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       // Menggunakan warna sekunder dari skema tema aplikasi.
-      color: Theme.of(context).colorScheme.secondary,
+      color: item.color,
       borderRadius: BorderRadius.circular(12),
       child: InkWell(
         // Aksi ketika kartu ditekan oleh pengguna.
