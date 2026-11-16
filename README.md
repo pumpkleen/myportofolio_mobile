@@ -48,3 +48,11 @@ Hot Reload: Memuat ulang perubahan kode UI (tampilan) ke dalam sistem tanpa meng
 Hot Restart: Menghentikan aplikasi, menghapus semua memori state (mengembalikan variabel data ke nilai awal), lalu memuat ulang seluruh kode. Waktu tunggunya sedikit lebih lama dari hot reload.
 
 Hot Restart atau Full Restart wajib dilakukan jika terdapat perubahan pada logika inisialisasi awal, perubahan variabel global, penambahan aset baru (gambar/font), atau modifikasi konfigurasi native sistem (seperti merombak pubspec.yaml, AndroidManifest.xml, atau file build lainnya).
+
+## Deklarasi Penggunaan AI (AI Disclosure)
+
+Dalam proses pengerjaan tugas 7 ini, pada bagian implementasi kode saya mengikuti seluruh arahan dari tutorial 8 tanpa menggunakan AI. Penggunaan AI digunakan dalam membantu saya memahami materi dan konsep dasar arsitektur flutter, seperti cara kerja Widget Tree, perbedaan dan penerapan StatelessWidget serta StatefulWidget, hingga peran esensial BuildContext.
+
+Seluruh penjelasan dan analisis konseptual yang disarankan oleh AI telah ditinjau ulang, dipahami, dan disesuaikan secara mandiri agar sepenuhnya selaras dengan struktur proyek awal serta memenuhi seluruh metrik penilaian tugas.
+
+https://share.gemini.google/xS1EZgYyxAxo
