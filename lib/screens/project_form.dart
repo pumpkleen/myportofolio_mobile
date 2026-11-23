@@ -1,9 +1,9 @@
 import 'package:material_ui/material_ui.dart';
+import 'package:myportofolio_mobile/screens/menu.dart';
 // TODO: Impor drawer yang sudah dibuat sebelumnya
 
 class ProjectFormPage extends StatefulWidget {
   const ProjectFormPage({super.key});
-  
 
   @override
   State<ProjectFormPage> createState() => _ProjectFormPageState();
@@ -35,7 +35,7 @@ class _ProjectFormPageState extends State<ProjectFormPage> {
             'Add Project Form',
           ),
         ),
-        backgroundColor: Colors.indigo,
+        backgroundColor: MyHomePage.ungu,
         foregroundColor: Colors.white,
       ),
       // TODO: Tambahkan drawer yang sudah dibuat di sini

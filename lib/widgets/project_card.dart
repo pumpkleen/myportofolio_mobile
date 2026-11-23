@@ -1,4 +1,5 @@
-import 'package:myportofolio_mobile/project_form.dart';
+import 'package:myportofolio_mobile/screens/experience_form.dart';
+import 'package:myportofolio_mobile/screens/project_form.dart';
 import 'package:flutter/material.dart';
 import 'package:myportofolio_mobile/screens/menu.dart';
 
@@ -30,12 +31,21 @@ class ItemCard extends StatelessWidget {
         if (item.name == "Tambah Proyek") {
           // TODO: Gunakan Navigator.push() untuk melakukan navigasi ke MaterialPageRoute yang mencakup ProjectFormPage
           Navigator.push(
-    context,
-    MaterialPageRoute<void>(
-      builder: (context) => const ProjectFormPage(),
-    ),
-  );
+            context,
+            MaterialPageRoute<void>(
+              builder: (context) => const ProjectFormPage(),
+            ),
+          );
         }
+        else if (item.name == "Tambah Experience"){
+          Navigator.push(
+            context,
+            MaterialPageRoute<void>(
+              builder: (context) => const ExperienceFormPage(),
+            ),
+          );
+        }
+        
       },
         child: Container(
           padding: const EdgeInsets.all(8),

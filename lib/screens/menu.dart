@@ -14,6 +14,7 @@ class MyHomePage extends StatelessWidget {
   static const hijau = Color(0xFFDEF356);
   static const merahmuda = Color(0xFFE04A8E);
   static const kuning = Color(0xFFECDE6F);
+  static const ungu = Color(0xFFC259A8);
 
   final List<ItemHomepage> items = [
     ItemHomepage("Lihat Proyek", Icons.folder, hijau),
@@ -35,7 +36,7 @@ class MyHomePage extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            backgroundColor: Theme.of(context).colorScheme.primary,
+            backgroundColor: ungu,
             iconTheme: const IconThemeData(color: Colors.white)
         ),
         drawer: const LeftDrawer(),

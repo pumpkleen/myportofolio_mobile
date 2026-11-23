@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:myportofolio_mobile/screens/experience_form.dart';
 import 'package:myportofolio_mobile/screens/menu.dart';
+import 'package:myportofolio_mobile/screens/project_form.dart';
 // TODO: Impor halaman ProjectFormPage jika sudah dibuat
 
 class LeftDrawer extends StatelessWidget {
@@ -56,6 +58,28 @@ class LeftDrawer extends StatelessWidget {
             title: const Text('Add Project'),
             // Navigasi ke halaman tambah proyek
             onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ProjectFormPage(),
+                ),
+              );
+              /*
+              TODO: Buatlah routing ke halaman ProjectFormPage yang akan dibuat nanti.
+              */
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.add_circle_outline),
+            title: const Text('Add Experience'),
+            // Navigasi ke halaman tambah proyek
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ExperienceFormPage(),
+                ),
+              );
               /*
               TODO: Buatlah routing ke halaman ProjectFormPage yang akan dibuat nanti.
               */

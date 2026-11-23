@@ -56,3 +56,19 @@ Dalam proses pengerjaan tugas 7 ini, pada bagian implementasi kode saya mengikut
 Seluruh penjelasan dan analisis konseptual yang disarankan oleh AI telah ditinjau ulang, dipahami, dan disesuaikan secara mandiri agar sepenuhnya selaras dengan struktur proyek awal serta memenuhi seluruh metrik penilaian tugas.
 
 https://share.gemini.google/xS1EZgYyxAxo
+
+
+### Tugas 8
+
+1. Jelaskan perbedaan antara Navigator.push(), Navigator.pushReplacement(), dan Navigator.pop(). Metode apa yang digunakan untuk membuka formulir dari kartu aksi? Jelaskan juga bagaimana opsi Home di drawer membawa pengguna kembali ke halaman utama.
+- Navigator.push akan masukin page sekarang ke dalam stack, nah karena masuk ke stack dia jadi bisa diambil lagi.
+- Navigator.pushReplacement() akan mereplace page yang sekarang. Jadi, bakal dihapus dari stack, kemudian menambahkan page baru ke stack. Kalo kayak gini, jadinya gabisa ngepop dari stack, alias gabisa undo.
+- Navigator.pop() menghapus route yang sedang ditampilkan kepada pengguna (atau dalam kata lain, route yang berada pada paling atas stack) dari stack route yang dikelola oleh Navigator. Method ini menyebabkan aplikasi untuk berpindah dari route yang sedang ditampilkan kepada pengguna ke route yang berada di bawahnya pada stack yang dikelola Navigator.
+
+2. Bagaimana susunan Scaffold, AppBar, dan Drawer membantu menjaga struktur halaman tetap konsisten? Berikan satu contoh penggunaan warna tema portofolio di lebih dari satu halaman.
+- scaffold adalah kerangka dasar yang menjadi struktur dasar tata letak satu halaman penuh. Scaffold menyediakan tempat yang sudah diatur posisinya untuk berbagai komponen, supaya satu halaman jadi rapi. Appbar adalah bagian di atas app, biasanya berisi tombol untuk membuka drawer dan juga ada indikator posisi user sekarang ada di page mana. Drawer adalah navigation bar yang terletak di samping, dia letaknya tersembunyi pada kondisi awal dan dapat dibuka melalui tombol yang ada di appbar. Salah satu contoh penggunaan warna tema portofolio di lebih dari satu halaman adalah penggunaan warna MyHomePage.ungu secara konsisten pada appbar di setiap halaman.
+
+3. Mengapa tata letak tersebut dipilih untuk formulir? Jelaskan peran widget pengatur jarak dan widget penggulir ketika ruang layar terbatas.
+- tata letak tersebut dipilih untuk formulir karena
+
+4. Apa peran GlobalKey<FormState>, validator, dan validate() saat tombol Simpan ditekan? Berikan satu contoh nilai yang ditolak oleh validasi dan jelaskan mengapa memilih jenis input atau papan ketik saja belum cukup.
