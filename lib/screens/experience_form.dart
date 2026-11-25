@@ -31,11 +31,7 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(
-          child: Text(
-            'Add Experience Form',
-          ),
-        ),
+        title: const Center(child: Text('Add Experience Form')),
         backgroundColor: MyHomePage.ungu,
         foregroundColor: Colors.white,
       ),
@@ -108,10 +104,12 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                   ),
                   initialValue: _category,
                   items: _categories
-                      .map((category) => DropdownMenuItem(
-                            value: category,
-                            child: Text(category),
-                          ))
+                      .map(
+                        (category) => DropdownMenuItem(
+                          value: category,
+                          child: Text(category),
+                        ),
+                      )
                       .toList(),
                   onChanged: (String? newValue) {
                     setState(() {
@@ -143,20 +141,21 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: ElevatedButton(
-                  onPressed: () async{
+                  onPressed: () async {
                     final DateTime? dateTime = await showDatePicker(
                       context: context,
                       initialDate: _selectedDate,
                       firstDate: DateTime(2000),
                       lastDate: DateTime(3000),
-                      );
-                    if (dateTime != null){
+                    );
+                    if (dateTime != null) {
                       setState(() {
                         _selectedDate = dateTime;
                       });
                     }
-                  }, 
-                  child: const Text("Choose Date")),
+                  },
+                  child: const Text("Choose Date"),
+                ),
               ),
 
               // === Project Link ===
@@ -184,8 +183,7 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                   padding: const EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     style: ButtonStyle(
-                      backgroundColor:
-                          WidgetStateProperty.all(Colors.indigo),
+                      backgroundColor: WidgetStateProperty.all(Colors.indigo),
                     ),
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
@@ -193,7 +191,9 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                           context: context,
                           builder: (context) {
                             return AlertDialog(
-                              title: const Text('Pengalaman berhasil ditambahkan!'),
+                              title: const Text(
+                                'Pengalaman berhasil ditambahkan!',
+                              ),
                               content: SingleChildScrollView(
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -201,7 +201,9 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                                     Text('Nama Pengalaman: $_experienceName'),
                                     Text('Deskripsi: $_description'),
                                     Text('Kategori: $_category'),
-                                    Text('Tanggal: ${_selectedDate.toString().split(" ")[0]}'),
+                                    Text(
+                                      'Tanggal: ${_selectedDate.toString().split(" ")[0]}',
+                                    ),
                                     Text('Teknologi: $_technologies'),
                                     Text('Tautan: $_experienceLink'),
                                   ],
@@ -230,8 +232,8 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
               ),
             ],
           ),
-          ),
         ),
-      );
+      ),
+    );
   }
 }
