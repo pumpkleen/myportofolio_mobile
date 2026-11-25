@@ -61,7 +61,7 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                   },
                   validator: (String? value) {
                     if (value == null || value.trim().isEmpty) {
-                      return "Nama pengalaman tidak boleh kosong!";
+                      return "Nama pengalaman tidak boleh kosong!!";
                     }
                     return null;
                   },
